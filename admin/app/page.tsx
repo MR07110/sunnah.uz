@@ -1,24 +1,20 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push('/dashboard');
-  }, [router]);
-
   return (
     <div style={{
       minHeight: '100vh',
       display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#1f2125'
+      backgroundColor: '#1f2125',
+      color: '#71baba'
     }}>
-      <div style={{ color: '#71baba' }}>Yuklanmoqda...</div>
+      <h1>SUNNAH.UZ Admin</h1>
+      <Link href="/dashboard" style={{ color: '#71baba', marginTop: '20px' }}>
+        Dashboard →
+      </Link>
     </div>
   );
 }
